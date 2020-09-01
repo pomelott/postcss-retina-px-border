@@ -39,45 +39,9 @@ or
 ### Use and development
 
 * the style generated have been transfer with autoprefixer, so just use it.
-* then you can use the output selector directly, the default selector as follows, and you can also config by your self.
+* then you can use the output selector directly, the selector with dpr 3 as follows, and you can also config by your self.
 
 ```css
-    @media screen and (-webkit-min-device-pixel-ratio: 1) {
-        .retina-border-1px {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border-width: 1px;
-            transform: scale(1);
-            transform-origin: 0 0
-        }
-        .retina-border-2px {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border-width: 2px;
-            transform: scale(1);
-            transform-origin: 0 0
-        }
-    }
-    @media screen and (-webkit-min-device-pixel-ratio: 2) {
-        .retina-border-1px {
-            position: relative;
-            width: 200%;
-            height: 200%;
-            border-width: 1px;
-            transform: scale(0.5);
-            transform-origin: 0 0
-        }
-        .retina-border-2px {
-            position: relative;
-            width: 200%;
-            height: 200%;
-            border-width: 2px;
-            transform: scale(0.5);
-            transform-origin: 0 0
-        }
-    }
     @media screen and (-webkit-min-device-pixel-ratio: 3) {
         .retina-border-1px {
             position: relative;
