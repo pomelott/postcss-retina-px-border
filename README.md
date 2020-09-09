@@ -2,6 +2,10 @@
 
 PostCSS plugin which create real physical pixel border dynamically on retina screen.
 
+## History versions
+
+* [v1](https://github.com/pomelott/postcss-retina-px-border/blob/master/v1.md)
+
 ## Fast use
 
 ### install
