@@ -1,10 +1,12 @@
 const postcssJs = require('postcss-js');
 const postcss = require('postcss');
 const lib = require('./lib');
+const path = require('path');
 const {styleTplGenerator} = lib.tpl;
-const {getFileName} = lib.util;
+const {getFileName, initTargetFile} = lib.util;
 const defaultConf = {
-  filename: 'retina-border',
+  baseDir: path.resolve(__dirname, '../../src'),
+  filename: 'retina-border.scss',
   pxRange: 2,
   dprRange: 3,
   selector: '.retina-border-%dpx'
@@ -12,6 +14,7 @@ const defaultConf = {
 module.exports = postcss.plugin('postcss-retina-px-border', function (opts) {
   opts = Object.assign({}, defaultConf, opts);
   const style = styleTplGenerator(opts);
+  initTargetFile(opts);
   return async function (root, finalResult) {
       let filename = getFileName(root.source.input.file);
       if (filename === opts.filename) {
