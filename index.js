@@ -13,12 +13,13 @@ const defaultConf = {
 }
 module.exports = postcss.plugin('postcss-retina-px-border', function (opts) {
   opts = Object.assign({}, defaultConf, opts);
-  const style = styleTplGenerator(opts);
+  const {baseStyle, pseudoStyle} = styleTplGenerator(opts);
   initTargetFile(opts);
   return async function (root, finalResult) {
       let filename = getFileName(root.source.input.file);
       if (filename === opts.filename) {
-        root.append(postcssJs.parse(style).nodes)
+        root.append(postcssJs.parse(baseStyle).nodes)
+        root.append(postcssJs.parse(pseudoStyle).nodes)
       }
   };
 });
