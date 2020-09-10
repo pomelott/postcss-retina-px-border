@@ -2,6 +2,8 @@
 
 PostCSS plugin which create real physical pixel border dynamically on retina screen.
 
+* if like this, could you please ⭐️star⭐ on github
+
 ## History versions
 
 * [v1](https://github.com/pomelott/postcss-retina-px-border/blob/master/v1.md)
@@ -72,21 +74,28 @@ notice: you should use a div to wrap the retina-border box, and provide the true
 
 ```html
     <div class="box">
-      <div class="retina-border-1px inter-box"></div>
+      <div class="retina-border-1px retina-border-box"></div>
+      <div class="content">box-content</div>
     </div>
 ```
 
 ```css
     .box{
-        width: 20vw;
+        width: 50vw;
         height: 40vw;
+        position: relative;
+        z-index: 1;
     }
-    .inter-box{
+    .retina-border-box{
         border-style: solid;
         border-color: red;
         border-radius: 100px;
         overflow: hidden;
         background: #f8f8f8;
+    }
+    .content {
+        font-size:5vw;
+        text-align: center;
     }
 ```
 
