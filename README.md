@@ -127,6 +127,7 @@ notice: you should give a specific class selector of div such as '.text-box'. th
 | pxRange | number | 2 | the range of borderWidth to generate |
 | dprRange | number | 3 | the range of dpr to generate |
 | selector | string | '.retina-border-%dpx' | the format of selector when generating |
+| baseSelector | string | '.retina-border-box' | the base-style selector |
 
 ## Strategy
 

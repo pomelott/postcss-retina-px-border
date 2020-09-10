@@ -9,7 +9,8 @@ const defaultConf = {
   filename: 'retina-border.scss',
   pxRange: 2,
   dprRange: 3,
-  selector: '.retina-border-%dpx'
+  selector: '.retina-border-%dpx',
+  baseSelector: '.retina-border-box'
 }
 module.exports = postcss.plugin('postcss-retina-px-border', function (opts) {
   opts = Object.assign({}, defaultConf, opts);
