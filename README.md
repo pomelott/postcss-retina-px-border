@@ -6,7 +6,9 @@ PostCSS plugin which create real physical pixel border dynamically on retina scr
 
 ## History versions
 
-* [v1](https://github.com/pomelott/postcss-retina-px-border/blob/master/v1.md)
+* [v1.x](https://github.com/pomelott/postcss-retina-px-border/blob/master/v1.md)
+* [v2.x](https://github.com/pomelott/postcss-retina-px-border/blob/master/v2.md) ( use inlined div )
+* v3.x use pseudo element
 
 ## Fast use
 

@@ -1,6 +1,6 @@
 {
   "name": "postcss-retina-px-border",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "PostCSS plugin which create real physical pixel border dynamically on retina screen.",
   "keywords": [
     "postcss",
